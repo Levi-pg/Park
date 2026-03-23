@@ -4,6 +4,7 @@ Library           SeleniumLibrary
 *** Test Cases ***
 Park Login
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    asd@gmail.com
     Input Text    //*[@id="password"]    Asd01
@@ -13,6 +14,7 @@ Park Login
 
 Park Fail Password
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    asd@gmail.com
     Input Text    //*[@id="password"]    Asd012
@@ -22,6 +24,7 @@ Park Fail Password
 
 Park Fail Email
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    asdgmail.com
     Input Text    //*[@id="password"]    Asd01
@@ -31,6 +34,8 @@ Park Fail Email
 
 Park Fail Empty
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
+
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    ${EMPTY}
     Input Text    //*[@id="password"]    ${EMPTY}
@@ -40,6 +45,7 @@ Park Fail Empty
 
 Park Alert
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    asdgmail.com
     Input Text    //*[@id="password"]    Asd012
@@ -49,6 +55,7 @@ Park Alert
 
 Park Logout
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Input Text    //*[@id="email"]    asd@gmail.com
     Input Text    //*[@id="password"]    Asd01
@@ -58,6 +65,7 @@ Park Logout
 
 Park New Car
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Sleep    2s
     Input Text    //*[@id="email"]    asd@gmail.com
@@ -78,6 +86,7 @@ Park New Car
 
 Park New Car Check
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Sleep    2s
     Input Text    //*[@id="email"]    asd@gmail.com
@@ -93,17 +102,15 @@ Park New Car Check
 
 Park Remove Car
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Sleep    2s
     Input Text    //*[@id="email"]    asd@gmail.com
     Input Text    //*[@id="password"]    Asd01
     Click Button    //*[@id="login-button"]
     Sleep    3s
-
     Click Element    //*[@id="cars-navbarlink"]
     Sleep    2s
-
-
     Click Button    //button[contains(., 'Törlés')]
     Sleep    1s
     Handle Alert    ACCEPT
@@ -112,17 +119,15 @@ Park Remove Car
 
 Park Cancel Remove Car
     Open Browser   https://parking-garage-app.netlify.app/    firefox
+    Sleep    2s
     Click Element    //*[@id="login-link"]/span
     Sleep    2s
     Input Text    //*[@id="email"]    asd@gmail.com
     Input Text    //*[@id="password"]    Asd01
     Click Button    //*[@id="login-button"]
     Sleep    3s
-
     Click Element    //*[@id="cars-navbarlink"]
     Sleep    2s
-
-
     Click Button    //button[contains(., 'Törlés')]
     Sleep    1s
     Handle Alert    DISMISS
